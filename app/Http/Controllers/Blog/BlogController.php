@@ -10,7 +10,7 @@ use App\Models\Blog\BlogImage;
 use Illuminate\Support\Facades\Session;
 use App\Traits\Service;
 use Illuminate\Support\Facades\File;
-use Intervention\Image\Facades\Image;
+use Intervention\Image\Laravel\Facades\Image;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
 

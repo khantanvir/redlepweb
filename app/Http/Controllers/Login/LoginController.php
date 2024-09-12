@@ -21,7 +21,11 @@ use App\Models\User;
 
 class LoginController extends Controller
 {
-    public function user_login(LoginRequest $request){
+    public function user_login(Request $request){
+        $request->validate([
+            'email' => 'required|email',
+            'password'=>'required'
+        ]);
         if($request->has('remember_me')){
             Session::put('user_email',$request->input('email'));
             Session::put('user_password',$request->input('password'));
@@ -34,14 +38,8 @@ class LoginController extends Controller
         try{
             if (Auth::attempt(['email' => $request->input('email'), 'password' => $request->input('password')])){
                 if(Auth::user()->active==1){
-                    if(Auth::user()->role=='student'){
-                        return redirect('student-portal');
-                    }
-                    if(Auth::user()->role=='agent'){
-                        return redirect('agent-applications');
-                    }
-                    if(Auth::user()->role=='subAgent'){
-                        return redirect('sub-agent-applications');
+                    if(Auth::user()->role=='admin'){
+                        return redirect('list-blog');
                     }
                     return redirect('/');
                 }else{
