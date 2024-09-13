@@ -45,6 +45,7 @@ Route::middleware(['auth'])->group(function () {
         Route::get('company-settings', 'company_settings');
         Route::post('company-setting-post', 'company_setting_post');
     });
+    
 });
 Route::controller(LoginController::class)->group(function () {
     Route::post('user-login-post', 'user_login');
@@ -56,6 +57,11 @@ Route::controller(LoginController::class)->group(function () {
 });
 Route::get('/', function () {
     return view('welcome');
+});
+Route::controller(UserController::class)->group(function () {
+    Route::get('profile-settings', 'profile_settings');
+    Route::get('edit_profile', 'edit_profile');
+    Route::post('my-profile-update', 'my_profile_update');
 });
 
 
