@@ -64,5 +64,14 @@ Route::controller(UserController::class)->group(function () {
     Route::post('my-profile-update', 'my_profile_update');
 });
 
+Route::get('/run-migrations', function () {
+    Artisan::call('migrate');
+    return 'Migrations have been run!';
+});
+Route::get('/clear-cache', function () {
+    Artisan::call('optimize:clear');
+    return 'All Cached Cleared!';
+});
+
 
 
