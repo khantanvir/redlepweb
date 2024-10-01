@@ -37,8 +37,8 @@
                                     <th scope="col">Description55</th>
                                     <th scope="col">Category66</th>
                                     <th scope="col">Publish Date77</th>
-                                    <th scope="col">Status</th>
-                                    <th scope="col">Action</th>
+                                    <th scope="col">Status33</th>
+                                    <th scope="col">Actionttt</th>
                                 </tr>
                             </thead>
                             <tbody>
