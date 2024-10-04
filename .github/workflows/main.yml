@@ -8,15 +8,15 @@ jobs:
     name: FTP-Deploy-Action
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      #- uses: actions/checkout@v3
+      - uses: /
         with:
           fetch-depth: 2
       #Deploy to cPanel
       - name: FTP-Deploy-Action
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          port: ${{ secrets.FTP_PORT }}
-          server-dir: /
+          server: ftp.redlep.com
+          username: api@redlep.com
+          password: api1234!@
+          port: 21
