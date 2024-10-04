@@ -33,11 +33,11 @@
                         <table class="table table-bordered">
                             <thead>
                                 <tr>
-                                    <th scope="col">Title987</th>
+                                    <th scope="col">Title123</th>
                                     <th scope="col">Description</th>
                                     <th scope="col">Category</th>
                                     <th scope="col">Publish Date</th>
-                                    <th scope="col">Status</th>
+                                    <th scope="col">Status321</th>
                                     <th scope="col">Actionttt</th>
                                 </tr>
                             </thead>
